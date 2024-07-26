@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeWorld</title>
+    <link rel="stylesheet" href="../css/story.css">
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <h1>AnimeWorld</h1> <!-- Judul utama halaman -->
+        <button id="backToHomeBtn">back</button> <!-- Tombol untuk kembali ke halaman utama -->
+    </header>
+
+    <!-- Hero section dengan slider -->
+    <section class="hero">
+        <div class="slider">
+            <div class="slides">
+                
+                <!-- Slide 2: Demon Slayer -->
+                <div class="slide">
+                    <video src="../aset/bfde7a8e1a04caf890227760287757ba.mp4" muted autoplay loop poster="image/poster.jpg" class="video"></video> <!-- Video untuk Demon Slayer -->
+                    <div class="text">
+                        <h2>Demon Slayer</h2>
+                        <p>Tanjiro Kamado adalah seorang anak yang baik hati dan cerdas yang tinggal bersama keluarganya di pegunungan. Dia telah menjadi pencari nafkah keluarga setelah kematian ayahnya, dengan membuat perjalanan ke desa terdekat untuk menjual arang. Segalanya berubah ketika dia pulang suatu hari dan menemukan bahwa keluarganya telah diserang dan dibunuh oleh iblis.</p>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Attack on Titan -->
+                <div class="slide">
+                    <video src="../aset/202407240218 (1).mp4" muted autoplay loop poster="image/poster.jpg" class="video"></video> <!-- Video untuk Attack on Titan -->
+                    <div class="text">
+                        <h2>Attack on Titan</h2>
+                        <p>Dalam sebuah dunia di mana umat manusia tinggal di dalam kota-kota besar yang dikelilingi tembok raksasa untuk melindungi diri dari Titan, makhluk humanoid raksasa, Eren Yeager bergabung dengan militer setelah ibunya terbunuh oleh Titan. Eren bersumpah untuk melindungi umat manusia dan mengungkap kebenaran di balik Titan dan tembok-tembok yang membatasi mereka. Bersama adik angkatnya, Mikasa, dan temannya, Armin, Eren memulai perjalanan berbahaya untuk melawan Titan dan mengungkap rahasia gelap dunia mereka.</p>
+                    </div>
+                </div>
+
+                <!-- Slide 4: Naruto -->
+                <div class="slide">
+                    <video src="../aset/202407240256 (1).mp4" muted autoplay loop poster="image/poster.jpg" class="video"></video> <!-- Video untuk Naruto -->
+                    <div class="text">
+                        <h2>Naruto</h2>
+                        <p>Naruto Uzumaki, seorang ninja muda dengan impian menjadi ninja terkuat dan pemimpin desa tempatnya tinggal, Hokage, berjuang dengan statusnya sebagai anak yatim piatu dan sebagai wadah bagi iblis Rubah Sembilan Ekor. Meskipun demikian, Naruto bertekad untuk mendapatkan rasa hormat dan pengakuan dari teman-temannya. Perjalanannya dipenuhi dengan tantangan, musuh-musuh yang kuat, dan teman-teman yang menjadi sekutu terbesarnya dalam pencariannya untuk menjadi ninja terhebat.</p>
+                    </div>
+                </div>
+
+                <!-- Slide 5: One Piece -->
+                <div class="slide">
+                    <video src="../aset/202407240233 (1).mp4" muted autoplay loop poster="image/poster.jpg" class="video"></video> <!-- Video untuk One Piece -->
+                    <div class="text">
+                        <h2>One Piece</h2>
+                        <p>Monkey D. Luffy, seorang bajak laut muda dengan kemampuan meregangkan tubuhnya seperti karet, memulai petualangan besar untuk menemukan harta legendaris yang dikenal sebagai One Piece dan menjadi Raja Bajak Laut. Sepanjang perjalanan, dia mengumpulkan kru yang beragam, menghadapi musuh-musuh yang kuat, dan mengungkap misteri dunia. Tekad Luffy yang tak tergoyahkan dan rasa petualangannya mendorongnya maju dalam pencariannya akan kejayaan.</p>
+                    </div>
+                </div>
+
+                <!-- Slide 6: Jujutsu Kaisen -->
+                <div class="slide">
+                    <video src="../aset/202407240300 (1).mp4" muted autoplay loop poster="image/poster.jpg" class="video"></video> <!-- Video untuk Jujutsu Kaisen -->
+                    <div class="text">
+                        <h2>jujutsu Kaisen</h2>
+                        <p>Di sebuah dunia di mana hampir semua orang memiliki kekuatan super yang dikenal sebagai Quirk, Izuku Midoriya adalah salah satu dari sedikit orang yang tidak memilikinya. Meskipun demikian, dia bermimpi menjadi pahlawan hebat seperti idolanya, All Might. Setelah bertemu secara kebetulan dengan All Might, Midoriya mewarisi kekuatannya dan mendaftar di SMA U.A., di mana dia berlatih untuk menjadi pahlawan profesional dan menghadapi penjahat yang mengancam masyarakat.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Kontrol navigasi slider -->
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+    </section>
+
+    <!-- Menghubungkan file JavaScript untuk slider -->
+    <script src="../js/story.js"></script>
+</body>
+</html>

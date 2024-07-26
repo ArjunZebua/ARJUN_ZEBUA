@@ -1,0 +1,179 @@
+/* Styling untuk elemen body halaman */
+body {
+  font-family: Arial, sans-serif; /* Mengatur font untuk seluruh halaman */
+  background-image: url('../aset/manga-naruto.webp'); /* Gambar latar belakang halaman */
+  background-size: cover; /* Menutup seluruh area latar belakang dengan gambar */
+  background-position: center; /* Menempatkan gambar di tengah latar belakang */
+  display: flex; /* Menggunakan Flexbox untuk tata letak */
+  justify-content: center; /* Menyelaraskan konten secara horizontal di tengah */
+  align-items: center; /* Menyelaraskan konten secara vertikal di tengah */
+  height: 100vh; /* Memastikan tinggi body mencakup seluruh tinggi viewport */
+  margin: 0; /* Menghapus margin default */
+  position: relative; /* Posisi relatif untuk elemen yang menggunakan positioning */
+}
+
+/* Styling untuk container utama */
+.container {
+  background-color: #1e1e1e; /* Warna latar belakang gelap untuk kontras yang baik */
+  padding: 20px; /* Ruang di dalam container */
+  border-radius: 10px; /* Sudut membulat */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Bayangan di sekitar container */
+  width: 90%; /* Lebar container sebagai persentase dari elemen induk */
+  max-width: 400px; /* Lebar maksimum container */
+  text-align: center; /* Menyelaraskan teks di tengah */
+  position: relative; /* Posisi relatif untuk elemen yang menggunakan positioning */
+  transition: all 0.3s ease; /* Transisi halus untuk semua perubahan */
+}
+
+/* Styling untuk paragraf */
+p {
+  color: azure; /* Warna teks untuk paragraf */
+}
+
+/* Styling untuk container formulir, tersembunyi secara default */
+.form-container {
+  display: none; /* Sembunyikan formulir secara default */
+}
+
+/* Styling untuk container formulir aktif */
+.active {
+  display: block; /* Tampilkan container yang aktif */
+}
+
+/* Styling untuk input elemen */
+input {
+  width: calc(100% - 20px); /* Lebar input dikurangi padding horizontal */
+  padding: 10px; /* Ruang di dalam input */
+  margin: 10px 0; /* Jarak vertikal antara input */
+  border: 1px solid #ccc; /* Garis border abu-abu terang */
+  border-radius: 5px; /* Sudut membulat border */
+  font-size: 16px; /* Ukuran font di dalam input */
+}
+
+/* Styling untuk tombol */
+button {
+  background-color: #d9534f; /* Warna latar belakang tombol merah muda */
+  color: white; /* Warna teks tombol putih */
+  padding: 12px 20px; /* Ruang di dalam tombol */
+  border: none; /* Menghapus border default tombol */
+  border-radius: 5px; /* Sudut membulat tombol */
+  margin-top: 10px; /* Jarak atas tombol dari elemen sebelumnya */
+  cursor: pointer; /* Menampilkan pointer saat hover di tombol */
+  font-size: 16px; /* Ukuran font di tombol */
+  transition: background-color 0.3s ease; /* Transisi halus untuk perubahan warna latar belakang */
+}
+
+/* Styling untuk tombol saat hover */
+button:hover {
+  background-color: #c9302c; /* Warna latar belakang merah gelap saat hover */
+}
+
+/* Styling untuk judul h2 */
+h2 {
+  color: #f0f0f0; /* Warna teks judul */
+  margin-bottom: 20px; /* Jarak bawah judul */
+}
+
+/* Styling untuk video */
+video {
+  width: 100%; /* Lebar video mengikuti lebar container */
+  max-width: 300px; /* Lebar maksimum video */
+}
+
+/* Styling untuk tombol kembali ke home */
+.back-button {
+  position: absolute; /* Posisi absolut untuk tombol */
+  top: 10px; /* Jarak atas dari elemen induk */
+  left: 10px; /* Jarak kiri dari elemen induk */
+  background-color: #b00101; /* Warna latar belakang merah gelap */
+  color: white; /* Warna teks tombol putih */
+  border: none; /* Menghapus border default tombol */
+  padding: 10px 20px; /* Ruang di dalam tombol */
+  border-radius: 5px; /* Sudut membulat tombol */
+  cursor: pointer; /* Menampilkan pointer saat hover di tombol */
+  font-size: 16px; /* Ukuran font di tombol */
+  transition: background-color 0.3s ease; /* Transisi halus untuk perubahan warna latar belakang */
+}
+
+/* Styling untuk tombol kembali ke home saat hover */
+.back-button:hover {
+  background-color: #b83131; /* Warna latar belakang merah lebih gelap saat hover */
+  box-shadow: 0 0 50px rgb(255, 254, 254); /* Bayangan halus saat hover */
+}
+
+/* Media Queries untuk responsivitas */
+
+/* Untuk layar dengan lebar maksimum 1200px */
+@media (max-width: 1200px) {
+  .container {
+    width: 85%; /* Lebar container lebih kecil */
+    padding: 15px; /* Ruang padding di dalam container */
+  }
+
+  button {
+    padding: 10px 18px; /* Ruang di dalam tombol */
+  }
+}
+
+/* Untuk layar dengan lebar maksimum 992px */
+@media (max-width: 992px) {
+  .container {
+    width: 90%; /* Lebar container lebih kecil */
+    padding: 15px; /* Ruang padding di dalam container */
+  }
+
+  button {
+    padding: 10px 16px; /* Ruang di dalam tombol */
+  }
+}
+
+/* Untuk layar dengan lebar maksimum 768px */
+@media (max-width: 768px) {
+  .container {
+    width: 95%; /* Lebar container lebih kecil */
+    padding: 15px; /* Ruang padding di dalam container */
+  }
+
+  button {
+    padding: 10px 14px; /* Ruang di dalam tombol */
+  }
+}
+
+/* Untuk layar dengan lebar maksimum 576px */
+@media (max-width: 576px) {
+  .container {
+    width: 100%; /* Lebar container menyesuaikan dengan lebar layar */
+    padding: 10px; /* Ruang padding di dalam container */
+  }
+
+  button {
+    width: 100%; /* Lebar tombol menyesuaikan dengan lebar container */
+    padding: 12px; /* Ruang di dalam tombol */
+  }
+
+  video {
+    max-width: 100%; /* Lebar maksimum video menyesuaikan dengan lebar container */
+  }
+
+  .back-button {
+    padding: 8px 16px; /* Ruang di dalam tombol */
+    font-size: 14px; /* Ukuran font di tombol */
+  }
+}
+
+/* Untuk layar dengan lebar maksimum 480px */
+@media (max-width: 480px) {
+  .container {
+    width: 100%; /* Lebar container menyesuaikan dengan lebar layar */
+    padding: 8px; /* Ruang padding di dalam container */
+  }
+
+  button {
+    padding: 12px; /* Ruang di dalam tombol */
+  }
+
+  .back-button {
+    padding: 8px 14px; /* Ruang di dalam tombol */
+    font-size: 12px; /* Ukuran font di tombol */
+  }
+}

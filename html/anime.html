@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Mengatur viewport untuk memastikan tata letak responsif pada perangkat mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Menetapkan judul halaman yang akan ditampilkan di tab browser -->
+    <title>Anime Details</title>
+    <!-- Menautkan file CSS eksternal untuk styling halaman -->
+    <link rel="stylesheet" href="../css/anime.css">
+</head>
+<body>
+    <!-- Container utama untuk detail anime -->
+    <div class="container">
+        <!-- Header yang menampilkan nama anime dan total episode -->
+        <div class="header">
+            <!-- Elemen untuk menampilkan nama anime -->
+            <div class="nama-anime">Nama anime</div>
+            <!-- Elemen untuk menampilkan total episode anime -->
+            <div class="total-episode">Total episode</div>
+        </div>
+        <!-- Bagian detail yang menampilkan informasi lebih lanjut tentang anime -->
+        <div class="details">
+            <!-- Kolom kiri untuk gambar dan rating anime -->
+            <div class="left-column">
+                <!-- Gambar anime, atribut alt untuk teks alternatif -->
+                <img class="anime-image" alt="Anime Image">
+                <!-- Elemen untuk menampilkan rating anime -->
+                <p class="ratingAnime"></p>
+            </div>
+            <!-- Kolom kanan untuk kategori, sinopsis, dan trailer anime -->
+            <div class="right-column">
+                <!-- Elemen untuk menampilkan kategori anime -->
+                <p class="categoryAnime"></p>
+                <!-- Elemen untuk menampilkan sinopsis anime -->
+                <p class="synopsisAnime"></p>
+                <!-- Iframe untuk menampilkan trailer anime, dengan izin fullscreen -->
+                <iframe class="trailerAnime" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- Tautan untuk kembali ke halaman utama -->
+    <a href="index.html" class="back-to-home-btn">Back to Home</a>
+    <!-- Menautkan file JavaScript eksternal untuk menangani interaksi halaman -->
+    <script src="../js/anime.js"></script>
+</body>
+</html>

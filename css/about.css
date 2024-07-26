@@ -1,0 +1,173 @@
+/* Gaya default untuk semua perangkat */
+body {
+    font-family: 'Arial', sans-serif; /* Mengatur font untuk seluruh halaman */
+    background: #161515; /* Warna latar belakang halaman */
+    color: wheat; /* Warna teks di halaman */
+    margin: 0; /* Menghapus margin default */
+    padding: 0; /* Menghapus padding default */
+    box-sizing: border-box; /* Memastikan padding dan border termasuk dalam ukuran elemen */
+}
+
+.container {
+    max-width: 1200px; /* Lebar maksimum kontainer */
+    margin: 0 auto; /* Mengatur margin otomatis untuk pusat kontainer */
+    padding: 100px; /* Ruang di sekitar konten kontainer */
+    background: #0a0808; /* Warna latar belakang kontainer */
+    border-radius: 50px; /* Membulatkan sudut kontainer */
+    box-shadow: 0 0 10px rgb(255, 254, 254); /* Menambahkan bayangan di sekitar kontainer */
+    position: relative; /* Membuat kontainer sebagai posisi relatif untuk posisi anak */
+    text-align: justify; /* Mengatur teks agar rata kiri dan kanan */
+}
+
+h2 {
+    font-size: 40px; /* Ukuran font untuk heading */
+    color: #ff6347; /* Warna teks untuk heading */
+    margin-bottom: 20px; /* Jarak bawah dari heading */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Mengatur font untuk heading */
+    text-align: center; /* Mengatur teks agar terpusat */
+}
+
+p:hover {
+    transform: scale(1.01); /* Memperbesar item sedikit saat di-hover */
+    box-shadow: 0 0 80px rgb(179, 16, 16); /* Menambahkan bayangan besar saat di-hover */
+    }
+
+p {
+    line-height: 24px; /* Jarak antar baris teks */
+    font-size: 20px; /* Ukuran font untuk paragraf */
+    margin: 0 auto; /* Mengatur margin otomatis untuk memusatkan teks */
+    max-width: 800px; /* Lebar maksimum paragraf */
+}
+
+p::first-line {
+    font-weight: bold; /* Membuat baris pertama paragraf menjadi tebal */
+    color: #ff6347; /* Warna teks untuk baris pertama paragraf */
+}
+
+.container::before {
+    content: ''; /* Konten kosong sebelum elemen untuk dekorasi */
+    display: block; /* Menampilkan elemen sebagai blok */
+    width: 100%; /* Lebar penuh kontainer */
+    height: 200px; /* Tinggi dari dekorasi */
+    background-size: cover; /* Mengatur ukuran latar belakang untuk menutupi elemen */
+    border-radius: 8px; /* Membulatkan sudut dekorasi */
+    position: absolute; /* Posisi dekorasi relatif terhadap kontainer */
+    top: 0; /* Jarak dari atas kontainer */
+    left: 0; /* Jarak dari kiri kontainer */
+    z-index: -1; /* Menempatkan dekorasi di belakang kontainer */
+}
+
+.back-home {
+    display: inline-block; /* Menampilkan elemen sebagai blok inline */
+    position: absolute; /* Posisi tombol relatif terhadap kontainer */
+    top: 20px; /* Jarak dari atas kontainer */
+    left: 20px; /* Jarak dari kiri kontainer */
+    padding: 10px 20px; /* Ruang di sekitar teks tombol */
+    font-size: 16px; /* Ukuran font untuk tombol */
+    color: #ff6347; /* Warna teks tombol */
+    background: #0a0808; /* Warna latar belakang tombol */
+    border: 2px solid #ff6347; /* Border tombol */
+    border-radius: 5px; /* Membulatkan sudut tombol */
+    text-decoration: none; /* Menghapus garis bawah dari tautan */
+    text-align: center; /* Memusatkan teks di dalam tombol */
+}
+
+.back-home:hover {
+    background: #ff6347; /* Warna latar belakang tombol saat dihover */
+    color: #0a0808; /* Warna teks tombol saat dihover */
+    box-shadow: 0 0 30px rgb(255, 254, 254); /* Menambahkan bayangan saat tombol dihover */
+}
+
+/* Media Queries */
+
+/* Untuk perangkat besar (desktop) */
+@media (min-width: 1200px) {
+    .container {
+        padding: 100px; /* Ruang di sekitar konten kontainer */
+    }
+
+    h2 {
+        font-size: 40px; /* Ukuran font untuk heading */
+    }
+
+    p {
+        font-size: 20px; /* Ukuran font untuk paragraf */
+        max-width: 800px; /* Lebar maksimum paragraf */
+    }
+
+    .back-home {
+        top: 20px; /* Posisi tombol dari atas */
+        left: 20px; /* Posisi tombol dari kiri */
+        font-size: 16px; /* Ukuran font untuk tombol */
+        padding: 10px 20px; /* Ruang di sekitar teks tombol */
+    }
+}
+
+/* Untuk perangkat menengah (tablet) */
+@media (max-width: 1199px) and (min-width: 768px) {
+    .container {
+        padding: 80px; /* Ruang di sekitar konten kontainer */
+    }
+
+    h2 {
+        font-size: 32px; /* Ukuran font untuk heading */
+    }
+
+    p {
+        font-size: 18px; /* Ukuran font untuk paragraf */
+        max-width: 90%; /* Lebar maksimum paragraf */
+    }
+
+    .back-home {
+        top: 15px; /* Posisi tombol dari atas */
+        left: 15px; /* Posisi tombol dari kiri */
+        font-size: 14px; /* Ukuran font untuk tombol */
+        padding: 8px 16px; /* Ruang di sekitar teks tombol */
+    }
+}
+
+/* Untuk perangkat kecil (smartphone) */
+@media (max-width: 767px) {
+    .container {
+        padding: 40px; /* Ruang di sekitar konten kontainer */
+    }
+
+    h2 {
+        font-size: 28px; /* Ukuran font untuk heading */
+    }
+
+    p {
+        font-size: 16px; /* Ukuran font untuk paragraf */
+        max-width: 100%; /* Lebar maksimum paragraf */
+    }
+
+    .back-home {
+        top: 10px; /* Posisi tombol dari atas */
+        left: 10px; /* Posisi tombol dari kiri */
+        font-size: 14px; /* Ukuran font untuk tombol */
+        padding: 8px 12px; /* Ruang di sekitar teks tombol */
+    }
+}
+
+/* Untuk perangkat ekstra kecil (mobil sangat kecil) */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px; /* Ruang di sekitar konten kontainer */
+        border-radius: 20px; /* Membulatkan sudut kontainer */
+    }
+
+    h2 {
+        font-size: 24px; /* Ukuran font untuk heading */
+    }
+
+    p {
+        font-size: 14px; /* Ukuran font untuk paragraf */
+    }
+
+    .back-home {
+        top: 5px; /* Posisi tombol dari atas */
+        left: 5px; /* Posisi tombol dari kiri */
+        font-size: 12px; /* Ukuran font untuk tombol */
+        padding: 6px 10px; /* Ruang di sekitar teks tombol */
+    }
+}

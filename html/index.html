@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Mendefinisikan karakter set dan viewport untuk responsivitas pada perangkat mobile -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ar-nime website</title>
+    
+    <!-- Link ke file CSS eksternal untuk styling halaman -->
+
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <!-- Container untuk video latar belakang -->
+    <div class="video-container">
+        <!-- Elemen video dengan atribut muted, autoplay, dan loop -->
+        <video src="../aset/yt5s.io-MUICHIRO TOKITO TWIXTOR CLIPS [Demon Slayer season 3 ep 8]-(1080p60).mp4" 
+               muted autoplay loop 
+               poster="image/poster.jpg" 
+               class="video">
+        </video>
+    </div>
+    
+    <!-- Bagian header halaman -->
+    <header>
+        <!-- Nama atau judul situs -->
+        <i>Ar-nimE.</i>
+        <!-- Navigasi utama situs -->
+        <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+        <nav class="navbar">
+            <!-- Link untuk navigasi dengan kelas 'active' pada link yang aktif saat ini -->
+            <a class="active" href="#Home">Home</a>
+            <a href="story.html">Story</a>
+            <!-- Link yang dinonaktifkan, bisa diaktifkan jika diperlukan -->
+            <!-- <a href="#anime">Action</a> -->
+            <a href="about.html">About</a>
+            <a href="login-regist.html">Sign in</a>
+        </nav>
+        <!-- Input untuk pencarian dengan fungsi JavaScript untuk mencari anime -->
+        <input type="text" id="search-bar" placeholder="Search anime..." oninput="searchAnime()">
+    </header>
+    
+    <!-- Container utama untuk konten anime -->
+    <div class="container">
+        <!-- Tempat untuk menampilkan elemen anime secara dinamis -->
+        <div id="anime-container" class="anime-container"></div>
+    </div>
+    
+    <!-- Garis horizontal untuk pemisah -->
+    <hr>
+    
+    <!-- Bagian footer halaman -->
+    <div>
+        <footer>
+            <!-- Informasi pembuat website -->
+            <i class="A">Pencipta Webiste:</i><br>
+            <i>@Arjun Zebua</i><br>
+          <!-- Elemen <p> digunakan untuk menampilkan teks paragraf -->
+<p>
+    <!-- Teks hak cipta yang menunjukkan tahun dan nama situs -->
+    Copyright © 2024 Dunia Anime. <!-- Menunjukkan hak cipta untuk tahun 2024 oleh Dunia Anime -->
+    All rights reserved. <!-- Menyatakan bahwa semua hak cipta dilindungi dan tidak ada yang boleh digunakan tanpa izin -->
+    Ar-nimE Webiste. <!-- Nama situs web -->
+</p>
+
+        </footer>
+    </div>
+
+    <!-- Link ke file JavaScript eksternal -->
+    <script src="../js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+/* Gaya dasar untuk elemen body */
+body {
+    font-family: Arial, sans-serif; /* Mengatur font untuk seluruh halaman */
+    margin: 0; /* Menghapus margin default */
+    padding: 0; /* Menghapus padding default */
+    color: #fff; /* Mengatur warna teks menjadi putih */
+    background-size: cover; /* Menyebarkan gambar latar belakang untuk menutupi seluruh area */
+    background-attachment: fixed; /* Membuat latar belakang tetap di posisinya saat menggulir halaman */
+}
+
+/* Gaya untuk elemen header */
+header {
+    background-color: rgba(0, 0, 0, 0.7); /* Latar belakang hitam dengan transparansi 70% */
+    padding: 20px; /* Ruang di dalam header */
+    display: flex; /* Menggunakan flexbox untuk tata letak */
+    justify-content: space-between; /* Menyebar elemen secara horizontal */
+    align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+    position: fixed; /* Membuat header tetap di atas saat menggulir */
+    width: 100%; /* Lebar penuh untuk header */
+    top: 0; /* Menempel di bagian atas halaman */
+    z-index: 1000; /* Menentukan urutan tumpukan z-index agar header di atas elemen lain */
+    box-sizing: border-box; /* Termasuk padding dan border dalam total lebar dan tinggi elemen */
+}
+
+/* Gaya untuk judul di dalam header */
+header h1 {
+    margin: 0; /* Menghapus margin default */
+    font-size: 28px; /* Ukuran font untuk judul */
+    color: red; /* Warna teks judul */
+}
+
+/* Gaya untuk tombol di dalam header */
+header button {
+    background-color: red; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    border: none; /* Menghapus border default tombol */
+    padding: 10px 20px; /* Ruang di dalam tombol */
+    font-size: 16px; /* Ukuran font tombol */
+    cursor: pointer; /* Menampilkan kursor pointer saat hover di tombol */
+    border-radius: 5px; /* Membuat sudut tombol melengkung */
+    margin-left: auto; /* Menggeser tombol ke sisi kanan header */
+}
+
+/* Gaya saat hover di tombol header */
+header button:hover {
+    background-color: darkred; /* Mengubah warna latar belakang tombol saat hover */
+}
+
+/* Gaya untuk section hero */
+.hero {
+    position: relative; /* Posisi relatif untuk pengaturan posisi elemen anak */
+    height: 100vh; /* Mengatur tinggi section hero sesuai tinggi viewport */
+    display: flex; /* Menggunakan flexbox untuk tata letak */
+    justify-content: center; /* Menyebar elemen secara horizontal di tengah */
+    align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+    overflow: hidden; /* Menghapus elemen yang melampaui area section hero */
+}
+
+/* Gaya untuk slider */
+.slider {
+    position: relative; /* Posisi relatif untuk pengaturan posisi elemen anak */
+    width: 100%; /* Lebar penuh untuk slider */
+    height: 100%; /* Tinggi penuh untuk slider */
+    overflow: hidden; /* Menghapus elemen yang melampaui area slider */
+}
+
+/* Gaya untuk kontainer slides */
+.slides {
+    display: flex; /* Menggunakan flexbox untuk tata letak slide secara horizontal */
+    transition: transform 0.5s ease-in-out; /* Transisi untuk efek pergeseran slide */
+    height: 100%; /* Tinggi penuh untuk slides */
+}
+
+/* Gaya untuk setiap slide */
+.slide {
+    min-width: 100%; /* Lebar minimal slide sama dengan lebar slider */
+    height: 100%; /* Tinggi penuh untuk slide */
+    box-sizing: border-box; /* Termasuk padding dan border dalam total lebar dan tinggi elemen */
+    position: relative; /* Posisi relatif untuk pengaturan posisi elemen anak */
+}
+
+/* Gaya untuk gambar di dalam slide */
+.slide img {
+    width: 100%; /* Lebar gambar penuh sesuai lebar slide */
+    height: 100%; /* Tinggi gambar penuh sesuai tinggi slide */
+    object-fit: cover; /* Mengisi area gambar tanpa merusak rasio aspek */
+}
+
+/* Gaya untuk teks di dalam slide */
+.text {
+    position: absolute; /* Posisi absolut untuk teks di dalam slide */
+    bottom: 20px; /* Jarak dari bagian bawah slide */
+    left: 20px; /* Jarak dari sisi kiri slide */
+    right: 20px; /* Jarak dari sisi kanan slide */
+    background: rgba(0, 0, 0, 0.7); /* Latar belakang hitam dengan transparansi 70% */
+    padding: 20px; /* Ruang di dalam teks */
+    border-radius: 10px; /* Membuat sudut teks melengkung */
+    color: #fff; /* Warna teks putih */
+    text-align: left; /* Menyelaraskan teks ke kiri */
+}
+
+/* Gaya untuk judul di dalam teks slide */
+.text h2 {
+    font-size: 36px; /* Ukuran font untuk judul */
+    margin: 0; /* Menghapus margin default */
+}
+
+/* Gaya untuk paragraf di dalam teks slide */
+.text p {
+    font-size: 18px; /* Ukuran font untuk paragraf */
+    line-height: 1.6; /* Jarak antar baris dalam paragraf */
+}
+
+/* Gaya untuk kontrol navigasi slider (prev dan next) */
+.prev, .next {
+    cursor: pointer; /* Menampilkan kursor pointer saat hover di kontrol navigasi */
+    position: absolute; /* Posisi absolut untuk kontrol navigasi */
+    top: 50%; /* Menempatkan kontrol navigasi di tengah vertikal */
+    width: auto; /* Lebar otomatis untuk kontrol navigasi */
+    padding: 16px; /* Ruang di dalam kontrol navigasi */
+    color: #fff; /* Warna teks kontrol navigasi */
+    font-weight: bold; /* Menebalkan font kontrol navigasi */
+    font-size: 36px; /* Ukuran font untuk simbol navigasi */
+    transition: background-color 0.3s ease; /* Transisi untuk efek perubahan warna latar belakang */
+    border-radius: 0 3px 3px 0; /* Membuat sudut kontrol navigasi melengkung pada sisi kanan */
+    user-select: none; /* Mencegah pemilihan teks pada kontrol navigasi */
+}
+
+/* Gaya untuk kontrol navigasi berikutnya */
+.next {
+    right: 0; /* Menempatkan kontrol navigasi di sisi kanan */
+    border-radius: 3px 0 0 3px; /* Membuat sudut kontrol navigasi melengkung pada sisi kiri */
+}
+
+/* Gaya saat hover di kontrol navigasi */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* Mengubah warna latar belakang kontrol navigasi saat hover */
+}
+
+/* Gaya untuk elemen video */
+video {
+    width: 100%; /* Lebar video sesuai lebar kontainer */
+    height: auto; /* Tinggi video otomatis sesuai dengan rasio aspek */
+}
+
+/* Media Queries untuk Responsif */
+
+/* Untuk layar dengan lebar maksimal 1024px (tablet) */
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 24px; /* Mengurangi ukuran font judul */
+    }
+
+    header button {
+        font-size: 14px; /* Mengurangi ukuran font tombol */
+        padding: 8px 16px; /* Mengurangi ruang di dalam tombol */
+    }
+
+    .text h2 {
+        font-size: 28px; /* Mengurangi ukuran font judul teks slide */
+    }
+
+    .text p {
+        font-size: 16px; /* Mengurangi ukuran font paragraf teks slide */
+    }
+}
+
+/* Untuk layar dengan lebar maksimal 768px (tablet kecil) */
+@media (max-width: 768px) {
+    header {
+        padding: 15px; /* Mengurangi padding header */
+    }
+
+    header h1 {
+        font-size: 20px; /* Mengurangi ukuran font judul */
+    }
+
+    header button {
+        font-size: 12px; /* Mengurangi ukuran font tombol */
+        padding: 6px 12px; /* Mengurangi ruang di dalam tombol */
+    }
+
+    .text h2 {
+        font-size: 24px; /* Mengurangi ukuran font judul teks slide */
+    }
+
+    .text p {
+        font-size: 14px; /* Mengurangi ukuran font paragraf teks slide */
+    }
+
+    .prev, .next {
+        font-size: 28px; /* Mengurangi ukuran font kontrol navigasi */
+        padding: 12px; /* Mengurangi ruang di dalam kontrol navigasi */
+    }
+}
+
+/* Untuk layar dengan lebar maksimal 480px (ponsel) */
+@media (max-width: 480px) {
+    header {
+        padding: 10px; /* Mengurangi padding header */
+    }
+
+    header h1 {
+        font-size: 18px; /* Mengurangi ukuran font judul */
+    }
+
+    header button {
+        font-size: 10px; /* Mengurangi ukuran font tombol */
+        padding: 4px 8px; /* Mengurangi ruang di dalam tombol */
+    }
+
+    .text {
+        padding: 10px; /* Mengurangi padding teks */
+        bottom: 10px; /* Mengurangi jarak dari bagian bawah slide */
+        left: 10px; /* Mengurangi jarak dari sisi kiri slide */
+        right: 10px; /* Mengurangi jarak dari sisi kanan slide */
+    }
+
+    .text h2 {
+        font-size: 20px; /* Mengurangi ukuran font judul teks slide */
+    }
+
+    .text p {
+        font-size: 12px; /* Mengurangi ukuran font paragraf teks slide */
+    }
+
+    .prev, .next {
+        font-size: 20px; /* Mengurangi ukuran font kontrol navigasi */
+        padding: 8px; /* Mengurangi ruang di dalam kontrol navigasi */
+    }
+}

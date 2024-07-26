@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Mengatur viewport untuk memastikan tata letak responsif pada perangkat mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Menetapkan judul halaman yang akan ditampilkan di tab browser -->
+  <title>Login & Registrasi</title>
+  <!-- Menautkan file CSS eksternal untuk styling halaman -->
+  <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+  <!-- Container utama untuk formulir login dan registrasi -->
+  <div class="container">
+    <!-- Container untuk formulir login, aktif secara default -->
+    <div id="loginContainer" class="form-container active">
+      <h2>Login</h2>
+      <!-- Formulir login dengan ID loginForm -->
+      <form id="loginForm">
+        <!-- Input untuk email dengan atribut required -->
+        <input type="email" id="loginEmail" placeholder="Email" required>
+        <!-- Input untuk password dengan atribut required -->
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <!-- Tombol untuk mengirim formulir login -->
+        <button type="submit">Login</button>
+      </form>
+      <!-- Tautan untuk beralih ke formulir registrasi -->
+      <p>Belum punya akun? <a href="#" id="showRegister">Registrasi disini</a></p>
+    </div>
+    <!-- Container untuk formulir registrasi, tidak aktif secara default -->
+    <div id="registerContainer" class="form-container">
+      <h2>Registrasi</h2>
+      <!-- Formulir registrasi dengan ID registerForm -->
+      <form id="registerForm">
+        <!-- Input untuk nama lengkap dengan atribut required -->
+        <input type="text" id="registerName" placeholder="Nama Lengkap" required>
+        <!-- Input untuk email dengan atribut required -->
+        <input type="email" id="registerEmail" placeholder="Email" required>
+        <!-- Input untuk password dengan atribut required -->
+        <input type="password" id="registerPassword" placeholder="Password" required>
+        <!-- Tombol untuk mengirim formulir registrasi -->
+        <button type="submit">Registrasi</button>
+      </form>
+      <!-- Tautan untuk beralih ke formulir login -->
+      <p>Sudah punya akun? <a href="#" id="showLogin">Login disini</a></p>
+    </div>
+  </div>
+  <!-- Tombol untuk kembali ke halaman utama -->
+  <button id="backToHome" class="back-button">Kembali ke Home</button>
+
+  <!-- Menautkan file JavaScript eksternal untuk menangani interaksi halaman -->
+  <script src="../js/login.js"></script>
+</body>
+</html>

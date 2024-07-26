@@ -1,0 +1,275 @@
+/* Atur ukuran font dasar untuk elemen HTML dan beberapa pengaturan umum */
+html {
+  font-size: 62.5%; /* Set ukuran font dasar menjadi 62.5% dari ukuran default (10px = 1rem) */
+  overflow-x: hidden; /* Menghindari scrollbar horizontal */
+  scroll-padding-top: 55px; /* Memberikan jarak ekstra di atas saat menggulir ke elemen yang terhubung dengan ID */
+}
+
+/* Pengaturan umum untuk semua elemen */
+* {
+  margin: 0; /* Menghapus margin default */
+  padding: 0; /* Menghapus padding default */
+  box-sizing: border-box; /* Mengatur ukuran elemen untuk menyertakan padding dan border dalam ukuran total */
+  text-decoration: none; /* Menghapus garis bawah pada tautan */
+  outline: none; /* Menghapus outline default pada elemen yang fokus */
+  border: none; /* Menghapus border default */
+  text-transform: capitalize; /* Mengubah setiap kata menjadi huruf kapital pada teks */
+  transition: all 250ms linear; /* Memberikan efek transisi halus pada semua perubahan gaya */
+}
+
+/* Pengaturan untuk elemen header */
+header {
+  position: fixed; /* Memasang header secara tetap di bagian atas halaman */
+  top: 0; /* Menempatkan header di bagian atas */
+  left: 0; /* Menempatkan header di sebelah kiri */
+  right: 0; /* Menempatkan header di sebelah kanan */
+  background-color: #000000; /* Warna latar belakang hitam */
+  padding: 16px 70px; /* Padding 16px di atas dan bawah, 70px di kiri dan kanan */
+  display: flex; /* Menggunakan flexbox untuk layout */
+  align-items: center; /* Menyusun item secara vertikal di tengah */
+  justify-content: space-between; /* Menyebarkan item secara horizontal dengan jarak di antara mereka */
+  z-index: 10000; /* Menetapkan z-index tinggi agar header tetap di atas elemen lainnya */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Memberikan bayangan halus di bawah header */
+  color: white; /* Warna teks putih */
+  font-weight: bolder; /* Menebalkan teks */
+}
+
+/* Pengaturan untuk elemen ikon di dalam header */
+header i {
+  color: #c5000a; /* Warna merah untuk ikon */
+}
+
+/* Pengaturan untuk tautan di dalam navbar di header */
+header .navbar a {
+  font-size: 17px; /* Ukuran font untuk tautan */
+  border-radius: 5px; /* Membuat sudut membulat pada tautan */
+  padding: 5px 15px; /* Padding untuk tautan */
+  color: white; /* Warna teks putih */
+}
+
+/* Pengaturan untuk tautan di navbar saat aktif atau saat hover */
+header .navbar a.active,
+header .navbar a:hover {
+  color: white; /* Warna teks putih saat aktif atau hover */
+  background: #E50914; /* Warna latar belakang merah saat aktif atau hover */
+}
+
+/* Pengaturan untuk elemen body */
+body {
+  font-family: Arial, sans-serif; /* Mengatur font dasar untuk tubuh */
+  margin: 31px; /* Margin di sekitar tubuh */
+  background-color: #000000; /* Warna latar belakang hitam */
+}
+
+/* Pengaturan untuk kontainer utama */
+.container {
+  padding: 20px; /* Padding di sekitar kontainer */
+}
+
+/* Pengaturan untuk container anime dengan flexbox */
+.anime-container {
+  display: flex; /* Menggunakan flexbox untuk layout */
+  flex-wrap: wrap; /* Membungkus elemen jika diperlukan */
+  gap: 30px; /* Jarak antara elemen */
+}
+
+/* Pengaturan untuk item anime */
+.anime-item {
+  border: 1px solid #ddd; /* Border tipis berwarna abu-abu terang */
+  border-radius: 8px; /* Sudut membulat pada border */
+  overflow: hidden; /* Menghindari konten meluap keluar */
+}
+
+/* Pengaturan untuk input pencarian di header */
+header input#search-bar {
+  padding: 5px; /* Padding di dalam input */
+  font-size: 16px; /* Ukuran font untuk input */
+  border-radius: 5px; /* Membuat sudut membulat pada input */
+}
+
+/* Pengaturan untuk keterangan gambar */
+figcaption {
+  padding: 10px; /* Padding di sekitar keterangan */
+  text-align: center; /* Menyusun teks ke tengah */
+  color: #ddd; /* Warna teks abu-abu terang */
+  font-size: 14px; /* Ukuran font untuk keterangan */
+}
+
+/* Pengaturan untuk kontainer video */
+.video-container {
+  display: flex; /* Menggunakan flexbox untuk layout */
+  justify-content: center; /* Menyusun item secara horizontal di tengah */
+  align-items: center; /* Menyusun item secara vertikal di tengah */
+  padding: 20px; /* Padding di sekitar kontainer video */
+}
+
+/* Pengaturan untuk elemen video */
+video {
+  border-radius: 20px; /* Membuat sudut membulat pada video */
+}
+
+/* Pengaturan untuk footer */
+div footer {
+  margin-bottom: 200px; /* Margin bawah besar untuk memberikan jarak */
+  height: 50px; /* Tinggi footer */
+  padding: 30px; /* Padding di sekitar footer */
+  font-size: 15px; /* Ukuran font untuk teks di footer */
+}
+
+/* Pengaturan untuk ikon di dalam footer */
+div footer i {
+  color: red; /* Warna merah untuk ikon */
+}
+
+/* Pengaturan untuk teks di dalam footer */
+div footer p {
+  color: rgb(237, 231, 241); /* Warna teks abu-abu terang */
+  padding: 80px; /* Padding di sekitar teks */
+  text-align: center; /* Menyusun teks ke tengah */
+}
+
+/* Pengaturan untuk garis horizontal */
+hr {
+  border: 1px solid white; /* Garis putih */
+}
+
+/* Pengaturan untuk tombol toggle menu */
+.menu-toggle {
+  display: none; /* Menyembunyikan tombol toggle secara default */
+  cursor: pointer; /* Menampilkan kursor pointer saat hover */
+  background: none; /* Tidak ada latar belakang */
+  font-size: 24px; /* Ukuran font untuk tombol */
+  color: white; /* Warna teks putih */
+  border: none; /* Tidak ada border */
+}
+
+/* Media query untuk ukuran layar besar */
+@media (min-width: 1200px) {
+  header {
+    padding: 16px 70px; /* Padding untuk layar besar */
+    font-size: 25px; /* Ukuran font untuk header */
+  }
+
+  header .navbar a {
+    font-size: 17px; /* Ukuran font untuk tautan */
+  }
+
+  .anime-item {
+    width: 200px; /* Lebar item anime */
+  }
+
+  .container img {
+    height: 300px; /* Tinggi gambar */
+    width: 200px; /* Lebar gambar */
+  }
+
+  video {
+    width: 80%; /* Lebar video */
+  }
+}
+
+/* Media query untuk ukuran layar menengah */
+@media (max-width: 1199px) and (min-width: 768px) {
+  header {
+    padding: 16px 50px; /* Padding untuk layar menengah */
+    font-size: 22px; /* Ukuran font untuk header */
+  }
+
+  header .navbar a {
+    font-size: 15px; /* Ukuran font untuk tautan */
+  }
+
+  .anime-item {
+    width: 150px; /* Lebar item anime */
+  }
+
+  .container img {
+    height: 250px; /* Tinggi gambar */
+    width: 150px; /* Lebar gambar */
+  }
+
+  video {
+    width: 90%; /* Lebar video */
+  }
+}
+
+/* Media query untuk ukuran layar kecil */
+@media (max-width: 767px) {
+  header {
+    padding: 16px 20px; /* Padding untuk layar kecil */
+    flex-direction: column; /* Mengatur layout flexbox ke arah kolom */
+    align-items: flex-start; /* Menyusun item ke awal kolom */
+    margin-bottom: 10px; /* Margin bawah */
+  }
+
+  header .navbar {
+    display: none; /* Menyembunyikan navbar secara default */
+    flex-direction: column; /* Mengatur layout flexbox ke arah kolom */
+    align-items: flex-start; /* Menyusun item ke awal kolom */
+  }
+
+  header .navbar.active {
+    display: flex; /* Menampilkan navbar saat aktif */
+  }
+
+  header .navbar a {
+    font-size: 14px; /* Ukuran font untuk tautan */
+    padding: 10px; /* Padding untuk tautan */
+  }
+
+  header input#search-bar {
+    width: 100%; /* Lebar input pencarian */
+    margin-top: 10px; /* Margin atas */
+  }
+
+  .menu-toggle {
+    display: block; /* Menampilkan tombol toggle menu */
+  }
+
+  .anime-item {
+    width: 100%; /* Lebar item anime */
+    max-width: 300px; /* Lebar maksimum item anime */
+  }
+
+  .container img {
+    height: auto; /* Tinggi otomatis gambar */
+    width: 100%; /* Lebar gambar */
+  }
+
+  video {
+    width: 100%; /* Lebar video */
+  }
+}
+
+/* Media query untuk ukuran layar sangat kecil */
+@media (max-width: 480px) {
+  header {
+    font-size: 16px; /* Ukuran font untuk header */
+  }
+
+  header .navbar a {
+    font-size: 12px; /* Ukuran font untuk tautan */
+    padding: 8px; /* Padding untuk tautan */
+  }
+
+  header input#search-bar {
+    padding: 8px; /* Padding di dalam input */
+    font-size: 14px; /* Ukuran font untuk input */
+  }
+
+  .anime-item {
+    width: 100%; /* Lebar item anime */
+    max-width: 280px; /* Lebar maksimum item anime */
+  }
+
+  .container img {
+    height: auto; /* Tinggi otomatis gambar */
+    width: 100%; /* Lebar gambar */
+  }
+}
+
+/* Efek hover pada item anime */
+.anime-item:hover {
+  transform: scale(1.11); /* Memperbesar item saat hover */
+  box-shadow: 0 0 50px rgb(248, 246, 246); /* Bayangan besar saat hover */
+}

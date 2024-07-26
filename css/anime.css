@@ -1,0 +1,210 @@
+/* Gaya default untuk semua perangkat */
+body, html {
+    background-color: #000; /* Warna latar belakang hitam untuk keseluruhan halaman */
+    color: #fff; /* Warna teks putih untuk kontras yang baik */
+    font-family: Arial, sans-serif; /* Menggunakan font Arial sebagai font default */
+    margin: 0; /* Menghapus margin default */
+    padding: 0; /* Menghapus padding default */
+}
+
+.container {
+    margin: 20px; /* Memberikan jarak 20px di sekitar container */
+}
+
+.header {
+    display: flex; /* Menggunakan flexbox untuk tata letak header */
+    justify-content: space-between; /* Menyebar elemen header secara horizontal */
+    border-bottom: 2px solid #fff; /* Garis bawah putih di header */
+    padding-bottom: 10px; /* Jarak bawah pada header */
+    margin-bottom: 20px; /* Jarak bawah pada header */
+}
+
+.header .nama-anime,
+.header .total-episode {
+    font-weight: bold; /* Menebalkan teks */
+    font-size: 19.2px; /* Ukuran font untuk nama anime dan total episode */
+}
+
+.details {
+    display: flex; /* Menggunakan flexbox untuk tata letak detail */
+    align-items: flex-start; /* Menyelaraskan elemen pada bagian atas */
+    justify-content: space-between; /* Menyebar elemen detail secara horizontal */
+}
+
+.left-column, .right-column {
+    width: 48%; /* Lebar kolom kiri dan kanan masing-masing 48% dari kontainer */
+}
+
+.left-column {
+    display: flex; /* Menggunakan flexbox untuk tata letak kolom kiri */
+    flex-direction: column; /* Mengatur elemen secara vertikal */
+    align-items: center; /* Menyelaraskan elemen di tengah kolom kiri */
+}
+
+.anime-image {
+    width: 100%; /* Gambar mengambil 100% dari lebar kolom */
+    max-width: 300px; /* Lebar maksimum gambar adalah 300px */
+    border-radius: 10px; /* Sudut gambar membulat */
+}
+
+.ratingAnime {
+    font-weight: bold; /* Menebalkan teks rating */
+    font-size: 19.2px; /* Ukuran font untuk rating anime */
+    margin-top: 10px; /* Jarak atas antara gambar dan rating */
+}
+
+.right-column {
+    display: flex; /* Menggunakan flexbox untuk tata letak kolom kanan */
+    flex-direction: column; /* Mengatur elemen secara vertikal */
+}
+
+.categoryAnime,
+.synopsisAnime {
+    margin: 10px 0; /* Jarak atas dan bawah antara elemen kategori dan sinopsis */
+}
+
+/* Style untuk video trailer */
+.trailerAnime {
+    width: 100%; /* Lebar iframe video adalah 100% dari lebar kolom */
+    height: 340px; /* Tinggi iframe video adalah 340px */
+    border: none; /* Menghapus border default iframe */
+    border-radius: 10px; /* Sudut iframe membulat */
+    margin-top: 20px; /* Jarak atas antara video dan teks di atasnya */
+}
+
+.name {
+    font-weight: bolder; /* Menebalkan teks nama */
+    color: red; /* Warna teks merah */
+}
+
+.category {
+    color: red; /* Warna teks merah untuk kategori */
+}
+
+/* Styling untuk tombol "Back to Home" */
+.back-to-home-btn {
+    display: inline-block; /* Menampilkan tombol sebagai elemen blok dalam baris */
+    padding: 10px 20px; /* Padding internal tombol */
+    margin: 20px; /* Margin di sekitar tombol */
+    color: red; /* Warna teks tombol merah */
+    background: black; /* Warna latar belakang tombol hitam */
+    text-align: center; /* Teks tombol diatur ke tengah */
+    text-decoration: none; /* Menghapus garis bawah dari tautan tombol */
+    border-radius: 5px; /* Sudut tombol membulat */
+    border: 2px solid red; /* Border merah di sekitar tombol */
+}
+
+.back-to-home-btn:hover {
+    background-color: #b21f1f; /* Warna latar belakang tombol saat hover */
+    color: rgb(13, 1, 1); /* Warna teks tombol saat hover */
+    box-shadow: 0 0 50px rgb(255, 254, 254); /* Bayangan tombol saat hover */
+}
+
+/* Media Queries */
+
+/* Untuk perangkat besar (desktop) */
+@media (min-width: 1200px) {
+    .header .nama-anime,
+    .header .total-episode {
+        font-size: 24px; /* Ukuran font yang lebih besar pada perangkat besar */
+    }
+
+    .left-column,
+    .right-column {
+        width: 48%; /* Lebar kolom tetap 48% */
+    }
+
+    .anime-image {
+        max-width: 300px; /* Lebar maksimum gambar tetap 300px */
+    }
+
+    .trailerAnime {
+        height: 340px; /* Tinggi iframe video tetap 340px */
+    }
+}
+
+/* Untuk perangkat menengah (tablet) */
+@media (max-width: 1199px) and (min-width: 768px) {
+    .header .nama-anime,
+    .header .total-episode {
+        font-size: 20px; /* Ukuran font menurun pada tablet */
+    }
+
+    .details {
+        flex-direction: column; /* Mengubah tata letak kolom menjadi vertikal */
+        align-items: center; /* Menyelaraskan elemen di tengah */
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%; /* Lebar kolom menjadi 100% */
+        margin-bottom: 20px; /* Jarak bawah antara kolom */
+    }
+
+    .anime-image {
+        max-width: 80%; /* Lebar maksimum gambar menjadi 80% */
+    }
+
+    .trailerAnime {
+        height: 300px; /* Tinggi iframe video menurun pada tablet */
+    }
+}
+
+/* Untuk perangkat kecil (smartphone) */
+@media (max-width: 767px) {
+    .header {
+        flex-direction: column; /* Mengubah tata letak header menjadi vertikal */
+        align-items: center; /* Menyelaraskan elemen di tengah */
+    }
+
+    .header .nama-anime,
+    .header .total-episode {
+        font-size: 18px; /* Ukuran font menurun pada smartphone */
+        text-align: center; /* Menyelaraskan teks header ke tengah */
+    }
+
+    .details {
+        flex-direction: column; /* Mengubah tata letak kolom menjadi vertikal */
+        align-items: center; /* Menyelaraskan elemen di tengah */
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%; /* Lebar kolom menjadi 100% */
+        margin-bottom: 20px; /* Jarak bawah antara kolom */
+    }
+
+    .anime-image {
+        max-width: 90%; /* Lebar maksimum gambar menjadi 90% */
+    }
+
+    .trailerAnime {
+        height: 250px; /* Tinggi iframe video menurun pada smartphone */
+    }
+
+    .back-to-home-btn {
+        padding: 12px 24px; /* Padding tombol menurun pada smartphone */
+        font-size: 14px; /* Ukuran font tombol menurun pada smartphone */
+    }
+}
+
+/* Untuk perangkat ekstra kecil (mobil sangat kecil) */
+@media (max-width: 480px) {
+    .header .nama-anime,
+    .header .total-episode {
+        font-size: 16px; /* Ukuran font menurun pada perangkat ekstra kecil */
+    }
+
+    .anime-image {
+        max-width: 100%; /* Lebar maksimum gambar menjadi 100% */
+    }
+
+    .trailerAnime {
+        height: 200px; /* Tinggi iframe video menurun pada perangkat ekstra kecil */
+    }
+
+    .back-to-home-btn {
+        padding: 10px 20px; /* Padding tombol menurun pada perangkat ekstra kecil */
+        font-size: 12px; /* Ukuran font tombol menurun pada perangkat ekstra kecil */
+    }
+}
